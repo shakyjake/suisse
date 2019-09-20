@@ -1,0 +1,10 @@
+
+textarea {
+	height: 14.4em;
+	max-width: 75%;
+	max-width: calc(100% - 1.35em - 2px);
+	min-height: 14.4em;
+	min-width: 75%;
+	min-width: calc(100% - 1.35em - 2px);
+	overflow: auto;
+}

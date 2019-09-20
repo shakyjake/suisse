@@ -1,0 +1,52 @@
+/* Carousel */
+
+.carousel-wrap {
+	position: relative;
+}
+
+.carousel {
+	align-items: stretch;
+	display: flex;
+	flex-direction: row;
+	overflow: auto;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+	scroll-snap-type: x mandatory;
+	width: 100%;
+}
+
+.carousel > div {
+	background: #E0E0E0;
+	flex: 0 0 7.75em; /* 0 0 ((parent width - (margin * (([columns] - 1) * 2)) - (padding * ([columns] * 2))) * [columns]) */
+	margin: 1em;
+	padding: 1em;
+	scroll-snap-align: start;
+	scroll-snap-stop: always;
+}
+
+.carousel > div:first-child {
+	margin-left: 0;
+}
+
+.carousel > div:last-child {
+	margin-right: 0;
+}
+
+.carousel-arrow {
+	height: 1.8em;
+	padding: 0;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: 1.8em;
+}
+
+.carousel-arrow.previous {
+	left: -2.7em;
+}
+
+.carousel-arrow.next {
+	right: -2.7em;
+}

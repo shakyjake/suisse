@@ -1,0 +1,39 @@
+
+
+.select-ish {
+	display: block;
+	position: relative;
+}
+
+.select-ish .panel {
+	background: #FFF;
+	background: rgba(255,255,255,0.8);
+	border: 1px solid #999;
+	border-radius: 0 0 0.2em 0.2em;
+	left: 1px;
+	margin-top: -3px;
+	max-height: 0;
+	overflow: auto;
+	padding: 0 0.45em;
+	position: absolute;
+	right: 1px;
+	top: 100%;
+	transition: all 0.1s linear;
+}
+
+.select-ish [type=search]:focus + .panel {
+	max-height: 11.25em;
+	max-height: calc(11.25em + 4px);
+}
+
+.select-ish .panel a {
+	cursor: pointer;
+	display: block;
+	margin: 0 0.225em;
+	padding: 0.225em 0;
+	text-decoration: none;
+}
+
+.select-ish .panel a + a {
+	border-top: 1px solid rgba(0,0,0,0.2);
+}

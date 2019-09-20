@@ -1,0 +1,27 @@
+
+.date-part, .date-input .separator {
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+.date-part label {
+	font-size: 0.75em;
+	padding: 0;
+}
+
+.date-input .separator {
+	margin: 1px 0;
+	padding: 0.45em 0;
+}
+
+.date-input .day-select {
+	width: 2.5em;
+}
+
+.date-input .month-select {
+	width: 6.2em;
+}
+
+.date-input .year-select {
+	width: 4em;
+}

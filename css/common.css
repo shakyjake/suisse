@@ -1,0 +1,227 @@
+/* Common Styles */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+abbr, article, aside, audio, bdi, canvas, data, datalist, details, dialog, figcaption, figure, footer, header, hgroup, main, mark, meter, nav, output, progress, section, summary, template, time, video, picture, img, iframe {
+	display: block;
+}
+
+picture, img {
+	border: none;
+	height: auto;
+	max-width: 100%;
+	object-fit: cover;
+	object-position: 50% 50%;
+	width: auto;
+}
+
+iframe {
+	border: none;
+	margin: 0 auto;
+	max-width: 100%;
+}
+
+html {
+	font-family: Roboto, sans-serif;
+	font-weight: 400;
+	font-size: 10px;
+	font-size: 1vw;
+	line-height: 1.8em;
+	min-height: 100%;
+	overflow: auto;
+	text-align:  left;
+}
+
+ul, ol {
+	margin: 0 0 0 2em;
+}
+
+p, li {
+	line-height: 1.8em;
+	padding: 0.45em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+
+a {
+	color: #0092cb;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: #00a4e0;
+	text-decoration: none;
+}
+
+a:active {
+	color: #00739e;
+}
+
+strong {
+	font-weight: 700;
+}
+
+blockquote p:first-child:before {
+	content: open-quote;
+}
+
+blockquote p:last-child:after {
+	content: close-quote;
+}
+
+/* Forms */
+
+label, input, textarea, select, button, .btn, .boxLink a, .validation-error {
+	display: block;
+	font-family: Roboto, sans-serif;
+	font-size: 16px;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.8em;
+	position: relative;
+	text-align: left;
+	text-decoration: none;
+	vertical-align: top;
+	z-index: 2;
+}
+
+label {
+	padding: 0.45em 0;
+}
+
+input, textarea, select, button, .btn, .boxLink a {
+	background: #FFF;
+	border: 1px solid #999;
+	border-radius: 0.2em;
+	padding: 0.45em 0.675em;
+	box-shadow: 0 0 0 rgba(0,0,0,0.1);
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+	color: #333;
+	margin: 1px;
+	outline: none;
+	width: 75%;
+	width: calc(100% - 1.35em - 4px);
+}
+
+input:hover, textarea:hover, select:hover {
+	border-color: #555;
+}
+
+input, select {
+	line-height: normal;/* IE and FX don't like line height */
+	height: 1.8em;/* height works tho */
+}
+
+select {
+	padding: 0.45em 0.45em 0.45em 0.675em;
+	width: calc(100% - 1.125em - 4px);
+}
+
+option {
+	padding: 0 0.675em;
+}
+
+input:focus, textarea:focus, select:focus {
+	border: 2px solid #1793E5;
+	box-shadow: 0 0 0 0.25em rgba(0,0,0,0.1);
+	margin: 0;
+	outline: none;
+}
+
+input[disabled] {
+	background: #CCC;
+	font-style: italic;
+}
+
+button, .btn, .boxLink a {
+	background: #0092CB;
+	border: none;
+	border-radius: 0.15em;
+	box-shadow: none;
+	color: #FFF;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 500;
+	padding: 0.45em 2.7em;
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+}
+
+button:focus, .btn:focus, .boxLink a:focus {
+	box-shadow: none;
+}
+
+button:hover, .btn:hover, .boxLink a:hover {
+	background-color: #00a4e0;
+}
+
+button:active, .btn:active, .boxLink a:active {
+	background-color: #00739E;
+}
+
+/*
+
+input[type=checkbox], input[type=radio] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	display: inline-block;
+	height: 1.8em;
+	height: calc(1.8em - 2px);
+	margin: 0.45em 0.675em 0.45em 0;
+	padding: 0;
+	vertical-align: top;
+	width: 1.8em;
+	width: calc(1.8em - 2px);
+}
+
+input[type=checkbox]:focus, input[type=radio]:focus {
+	margin: 0.45em 0.675em 0.45em 0;
+	height: calc(1.8em - 4px);
+	width: calc(1.8em - 4px);
+}
+
+input[type=radio] {
+	border-radius: 50%;
+}
+
+input[type=checkbox]:checked {
+	background: #0e4b7f;
+	background:
+		linear-gradient(45deg, #fff 0%, #fff 0.45em, transparent 0.45em, transparent calc(100% - 0.45em), #fff calc(100% - 0.45em), #fff 100%) no-repeat 50% 50%/1.8em 1.8em,
+		linear-gradient(-45deg, #fff 0%, #fff 0.45em, transparent 0.45em, transparent calc(100% - 0.45em), #fff calc(100% - 0.45em), #fff 100%) no-repeat 50% 50%/1.8em 1.8em,
+		linear-gradient(45deg, transparent 0%, transparent calc(50% - 0.1125em), #0e4b7f calc(50% - 0.1125em), #0e4b7f calc(50% + 0.1125em), transparent calc(50% + 0.1125em), transparent 100%) no-repeat 50% 50%/1.35em 1.35em,
+		linear-gradient(-45deg, transparent 0%, transparent calc(50% - 0.1125em), #0e4b7f calc(50% - 0.1125em), #0e4b7f calc(50% + 0.1125em), transparent calc(50% + 0.1125em), transparent 100%) no-repeat 50% 50%/1.35em 1.35em #fff;
+}
+
+input[type=radio]:checked {
+	background: #0e4b7f;
+	background: radial-gradient(circle at center, #0e4b7f 0, #0e4b7f 50%, #FFF 50%, #FFF 100%);
+	background: radial-gradient(circle at center, #0e4b7f 0, #0e4b7f 50%, #FFF calc(50% + 1px), #FFF 100%);
+}
+
+input[type=checkbox] + label, input[type=radio] + label {
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
+	width: 90%;
+	width: calc(100% - 2.775em - 4px);
+}
+
+.validation-error {
+	background: #f3d8d5;
+	color: #c23a2c;
+	display: block;
+	padding: 0.45em 0.675em;
+	z-index: 1;
+}*/
