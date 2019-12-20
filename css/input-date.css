@@ -1,27 +1,26 @@
 
-.date-part, .date-input .separator {
+.date-part, .date-input .date-separator {
 	display: inline-block;
 	vertical-align: bottom;
 }
 
-.date-part label {
+.sub-label {
 	font-size: 0.75em;
 	padding: 0;
 }
 
-.date-input .separator {
-	margin: 1px 0;
-	padding: 0.45em 0;
+.date-separator {
+	margin: 0 0 var(--spacing-s) 0;
 }
 
-.date-input .day-select {
+.day-select {
 	width: 2.5em;
 }
 
-.date-input .month-select {
+.month-select {
 	width: 6.2em;
 }
 
-.date-input .year-select {
+.year-select {
 	width: 4em;
 }

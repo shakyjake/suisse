@@ -1,10 +1,13 @@
 
 textarea {
-	height: 14.4em;
-	max-width: 75%;
-	max-width: calc(100% - 1.35em - 2px);
-	min-height: 14.4em;
-	min-width: 75%;
-	min-width: calc(100% - 1.35em - 2px);
+	height: 5.4em;
+	max-width: calc(100% - 0.2em - var(--spacing-m));
+	min-height: var(--text-body-line);
+	min-width: calc(100% - 0.2em - var(--spacing-m));
 	overflow: auto;
+}
+
+textarea:focus {
+	max-width: calc(100% - 0.2em - var(--spacing-m));
+	min-width: calc(100% - 0.2em - var(--spacing-m));
 }

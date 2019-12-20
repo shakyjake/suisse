@@ -8,7 +8,7 @@
 
 [type=checkbox] + label {
 	cursor: pointer;
-	padding-left: 2.7em;
+	padding-left: var(--spacing-l);
 	position: relative;
 	z-index: 2;
 }
@@ -21,10 +21,10 @@
 [type=checkbox] + label:before {
 	border-radius: 0.2em;
 	box-shadow: 0 0 0 1px #999;
-	height: 1.8em;
+	height: var(--text-body-line);
 	left: 0;
-	top: 0.45em;
-	width: 1.8em;
+	top: var(--spacing-xs);
+	width: var(--text-body-line);
 }
 
 [type=checkbox] + label:hover:before {
@@ -36,8 +36,8 @@
 }
 
 [type=checkbox]:checked + label:before {
-	background: #0092CB;
-	box-shadow: 0 0 0 1px #0092CB;
+	background: var(--interactive);
+	box-shadow: 0 0 0 1px var(--interactive);
 }
 
 [type=checkbox] + label:after {
@@ -54,7 +54,7 @@
 
 [type=checkbox]:checked + label:after {
 	border-color: #fff;
-	height: 0.45em;
+	height: var(--spacing-xs);
 	left: 0.7em;
 	transition: height 0.05s linear, width 0.05s 0.05s linear;
 	width: 0.9em;

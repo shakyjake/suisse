@@ -8,7 +8,7 @@ table caption {
 	background: #fafafa;
 	caption-side: bottom;
 	font-style: italic;
-	padding: 0.45em 1.35em;
+	padding: var(--spacing-xs) var(--spacing-s);
 	text-align: center;
 }
 
@@ -16,11 +16,11 @@ td, th {
 	background: #fff;
 	border-top: 1px solid #DFE3E6;
 	border-bottom: 1px solid #DFE3E6;
-	padding: 0.45em 1.35em;
+	padding: var(--spacing-xs) var(--spacing-s);
 	text-align: left;
 }
 
-th {
+th[scope=col], th[scope^=col], th[scope$=col] {
 	background: #F4F7FA;
 	font-weight: 700;
 }
@@ -35,8 +35,8 @@ th:last-child, td:last-child {
 
 tr:hover td {
 	background: #ecf3fc;
-	border-color: #0092cb;
-	box-shadow: inset 0 1px 0 #0092cb;
+	border-color: var(--interactive);
+	box-shadow: inset 0 1px 0 var(--interactive);
 }
 
 td p {
@@ -45,7 +45,7 @@ td p {
 
 td p ~ p {
 	font-size: 0.8em;
-	line-height: 1.8em;
+	line-height: var(--text-body-line);
 }
 
 th[data-sort]:after {

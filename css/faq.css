@@ -1,16 +1,16 @@
 
-.faq dt {
+.question {
 	background: #fff;
 	border: 1px solid #DFE3E6;
 	border-radius: 0.2em;
 	color: #333;
 	cursor: pointer;
-	padding: 0.45em 0.675em 0.45em 1.8em;
+	padding: var(--spacing-xs) var(--spacing-s) var(--spacing-xs) var(--text-body-line);
 	position: relative;
 }
 
-.faq dt:before {
-	color: #0092cb;
+.question:before {
+	color: var(--interactive);
 	content: '\203a';
 	display: inline-block;
 	font-size: 1.5em;
@@ -26,39 +26,39 @@
 	width: 1.2em;
 }
 
-.faq dt.open:before {
+.question-open:before {
 	transform: rotate(90deg);
 }
 
-.faq dt.open {
+.question-open {
 	border-radius: 0.2em 0.2em 0 0;
 }
 
-.faq dt:hover, .faq dt.open {
+.question:hover, .faq .question-open {
 	background: #f5f8fd;
-	border-color: #0092cb;
-	color: #0092cb;
+	border-color: var(--interactive);
+	color: var(--interactive);
 }
 
-.faq dt:hover {
+.question:hover {
 	background: #ecf3fc;
 }
 
-.faq dd {
+.answer {
 	border: 1px solid transparent;
 	border-radius: 0 0 0.2em 0.2em;
 	border-top: none;
 	color: #666;
 	overflow: hidden;
-	padding: 0 0.675em;
-	transition: height 0.1s linear, padding 0.1s linear;
+	padding: 0 var(--spacing-s);
+	transition: height 0.1s linear;
 }
 
-.faq dt.open + dd {
-	border-color: #0092cb;
-	padding: 0.45em 0.675em;
+.question-open + .answer {
+	border-color: var(--interactive);
+	padding: 0 var(--spacing-s);
 }
 
-.faq dd + dt {
-	margin-top: 0.45em;
+.answer + .question {
+	margin-top: var(--spacing-xs);
 }

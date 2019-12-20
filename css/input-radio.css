@@ -8,7 +8,7 @@
 
 [type=radio] + label {
 	cursor: pointer;
-	padding-left: 2.7em;
+	padding-left: var(--spacing-l);
 	position: relative;
 	z-index: 2;
 }
@@ -18,13 +18,13 @@
 	content: '';
 	left: 0;
 	position: absolute;
-	top: 0.45em;
+	top: var(--spacing-xs);
 }
 
 [type=radio] + label:before {
 	box-shadow: 0 0 0 1px #999;
-	height: 1.8em;
-	width: 1.8em;
+	height: var(--text-body-line);
+	width: var(--text-body-line);
 }
 
 [type=radio] + label:hover:before {
@@ -36,7 +36,7 @@
 }
 
 [type=radio]:checked + label:before {
-	box-shadow: 0 0 0 1px #0092CB;
+	box-shadow: 0 0 0 1px var(--interactive);
 }
 
 [type=radio] + label:after {
@@ -47,9 +47,9 @@
 }
 
 [type=radio]:checked + label:after {
-	background: #0092CB;
-	height: calc(1.8em - 4px);
+	background: var(--interactive);
+	height: calc(var(--text-body-line) - 4px);
 	margin: 2px;
 	transition: width 0.1s, height 0.1s, margin 0.1s;
-	width: calc(1.8em - 4px);
+	width: calc(var(--text-body-line) - 4px);
 }

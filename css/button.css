@@ -1,0 +1,46 @@
+/* Buttons */
+
+button {
+	border-radius: 0.25em;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 1rem;
+	font-weight: 500;
+	line-height: var(--text-body-line);
+	text-align: center;
+	text-decoration: none;
+	width: auto;
+}
+
+.primary-action {
+	background: var(--interactive);
+	border: none;
+	color: #fff;
+	padding: var(--spacing-xs) var(--spacing-l);
+}
+
+.primary-action:hover {
+	background-color: var(--interactive-hover);
+}
+
+.primary-action:active {
+	background-color: var(--interactive-active);
+}
+
+.secondary-action {
+	background: transparent;
+	border: 0.2em solid var(--interactive);
+	color: var(--interactive);
+	padding: calc(var(--spacing-xs) - 0.2em) calc(var(--spacing-l) - 0.2em);
+}
+
+.secondary-action:hover {
+	border-color: var(--interactive-hover);
+	color: var(--interactive-hover);
+}
+
+.secondary-action:active {
+	border-color: var(--interactive-active);
+	color: var(--interactive-active);
+}
+	
