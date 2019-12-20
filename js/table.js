@@ -1,4 +1,11 @@
 
+function StripWhitespace(Text){
+	Text = Text.replace(/^[\s\n\r\t]+/g, '');
+	Text = Text.replace(/[\s\n\r\t]+$/g, '');
+	Text = Text.replace(/[\n\r\t]+/g, '');
+	return Text;
+}
+
 function SortTableRows(event){
 	
 	event.stopImmediatePropagation();
@@ -32,10 +39,10 @@ function SortTableRows(event){
 		i -= 1;
 		Values.push({
 			"Row" : Rows[i],
-			"Value" : Rows[i].children[Index].textContent,
+			"Value" : StripWhitespace(Rows[i].children[Index].textContent),
 			"OldIndex" : Rows[i].rowIndex
 		});
-		TextMode = TextMode || isNaN(parseFloat(Rows[i].children[Index].textContent));
+		TextMode = TextMode || isNaN(parseFloat(StripWhitespace(Rows[i].children[Index].textContent)));
 	}
 	
 	if(TextMode){
@@ -72,6 +79,7 @@ function SortTableRows(event){
 
 (() => {
 	document.querySelectorAll('th[scope=col]').forEach((Header) => {
+		Header.width = Header.scrollWidth;
 		Header.addEventListener('click', SortTableRows);
 		Header.addEventListener('tap', SortTableRows);
 	});

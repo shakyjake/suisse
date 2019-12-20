@@ -3,14 +3,17 @@ function ExpandAnswer(event){
 	event.stopImmediatePropagation();
 	const Question = event.target;
 	const Answer = Question.nextElementSibling;
-	Question.className = Question.className === 'open' ? '' : 'open';
-	Answer.style.height = Answer.style.height === '0px' ? Question.dataset.answerheight + 'px' : '0px';
+	const IsOpen = Question.getAttribute('aria-expanded') === 'true';
+	
+	Question.classList.toggle('question-open');
+	Question.setAttribute('aria-expanded', IsOpen ? 'false' : 'true');
+	Answer.style.height = IsOpen ? '0px' : Question.dataset.answerHeight + 'px';
 }
 
 (() => {
-	document.querySelectorAll('.faq dt').forEach((Question) => {
+	document.querySelectorAll('.question').forEach((Question) => {
 		if(!!Question.nextElementSibling){
-			Question.dataset.answerheight = Question.nextElementSibling.clientHeight;
+			Question.dataset.answerHeight = Question.nextElementSibling.scrollHeight;
 			Question.nextElementSibling.style.height = '0px';
 			Question.addEventListener('click', ExpandAnswer);
 			Question.addEventListener('tap', ExpandAnswer);
