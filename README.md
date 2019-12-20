@@ -5,13 +5,15 @@ https://shakyjake.github.io/suisse/html/carousel.html
 
 https://shakyjake.github.io/suisse/html/faq.html
 
+https://shakyjake.github.io/suisse/html/button.html
+
 https://shakyjake.github.io/suisse/html/input-checkbox.html
+
+https://shakyjake.github.io/suisse/html/input-inline.html
 
 https://shakyjake.github.io/suisse/html/input-date.html
 
 https://shakyjake.github.io/suisse/html/input-radio.html
-
-https://shakyjake.github.io/suisse/html/input-select.html
 
 https://shakyjake.github.io/suisse/html/input-toggle.html
 
