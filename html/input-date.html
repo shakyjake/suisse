@@ -14,15 +14,15 @@
 		</style>
 	</head>
 	<body>
-		<p class="date-input">
+		<div class="field field--date">
 			<label for="{Name}">{Label}</label>
 			<span class="date-part">
-				<label for="{Name}_Day">Day</label>
+				<label for="{Name}_Day" class="sub-label">Day</label>
 				<input type="number" step="1" min="1" max="31" name="{Name}_Day" id="{Name}_Day" class="day-select"/>
 			</span>
-			<span class="separator">/</span>
+			<span class="date-separator">/</span>
 			<span class="date-part">
-				<label for="{Name}_Month">Month</label>
+				<label for="{Name}_Month" class="sub-label">Month</label>
 				<select name="{Name}_Month" id="{Name}_Month" class="month-select">
 					<option value="01">January</option>
 					<option value="02">February</option>
@@ -38,14 +38,13 @@
 					<option value="12">December</option>
 				</select>
 			</span>
-			<span class="separator">/</span>
+			<span class="date-separator">/</span>
 			<span class="date-part">
-				<label for="{Name}_Year">Year</label>
+				<label for="{Name}_Year" class="sub-label">Year</label>
 				<input type="number" min="{MinYear}" max="{MinYear}" step="1" name="{Name}_Year" id="{Name}_Year" class="year-select" />
 			</span>
 			<input type="hidden" name="{Name}" id="{Name}" value="{Value}" class="date-input-hidden" />
-			{Error_{Name}}
-		</p>
+		</div>
 		<script src="../js/input-date.js"></script>
 	</body>
 </html>
