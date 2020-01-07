@@ -9,6 +9,8 @@ https://shakyjake.github.io/suisse/html/button.html
 
 https://shakyjake.github.io/suisse/html/input-checkbox.html
 
+https://shakyjake.github.io/suisse/html/input-color.html
+
 https://shakyjake.github.io/suisse/html/input-inline.html
 
 https://shakyjake.github.io/suisse/html/input-date.html
