@@ -1,0 +1,55 @@
+/* Color Input */
+
+.input--color {
+	padding: var(--spacing-xs);
+	width: var(--text-body-line);
+}
+
+.colour-picker {
+	background: #F5F5F5;
+	background: linear-gradient(0deg, #E5E5E5, #F5F5F5);
+	border: 0.1em solid #CCC;
+	border-radius: 0.25em;
+	padding: var(--spacing-s);
+	width: var(--spacing-xxl);
+}
+
+.picker--rgb {
+	background: #000;
+	background: linear-gradient(0deg, rgba(0,0,0,1), rgba(0,0,0,0) 50%), linear-gradient(0deg, rgba(255,255,255,0) 50%, rgba(255,255,255,1)), linear-gradient(90deg, #F00, #FF0, #0F0, #0FF, #00F, #F0F, #F00);
+	cursor: crosshair;
+	outline: 1px solid #CCC;
+	padding: 0 0 100% 0;
+	position: relative;
+}
+
+.picker--shade {
+	background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,1)) #000;
+	cursor: crosshair;
+	height: var(--spacing-m);
+	margin-top: var(--spacing-s);
+	outline: 1px solid #CCC;
+	position: relative;
+}
+
+.colour-picker-output {
+	padding-top: var(--spacing-s);
+	position: relative;
+}
+
+.input--color-output {
+	background: #FFF;
+	position: relative;
+	z-index: 2;
+}
+
+.active-colour {
+	background: #000;
+	border: 0.1em solid #808080;
+	bottom: var(--spacing-xs);
+	width: var(--spacing-m);
+	position: absolute;
+	right: var(--spacing-xs);
+	top: calc(var(--spacing-s) + var(--spacing-xs));
+	z-index: 3;
+}
