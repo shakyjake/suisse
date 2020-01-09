@@ -123,12 +123,13 @@ label {
 }
 
 input, textarea, select {
-	border: 0.1em solid #999;
+	background: none;
+	border: 1px solid #999;
 	border-radius: 0.25em;
 	box-sizing: content-box;
-	margin: 0.1em;
+	margin: 1px;
 	padding: var(--spacing-xs) var(--spacing-s);
-	width: calc(100% - 0.2em - var(--spacing-m));
+	width: calc(100% - 2px - var(--spacing-m));
 }
 
 input, select {
@@ -143,7 +144,7 @@ input:hover, textarea:hover, select:hover {
 input:focus, textarea:focus, select:focus {
 	border-color: #39C;
 	box-shadow: 0 0 0 0.3em rgba(0,0,0,0.1);
-	border-width: 0.2em;
+	border-width: 2px;
 	margin: 0;
 }
 

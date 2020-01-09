@@ -33,6 +33,10 @@ th:last-child, td:last-child {
 	border-right: 1px solid #DFE3E6;
 }
 
+.table-sort-available {
+	cursor: pointer;
+}
+
 tr:hover td {
 	background: #ecf3fc;
 	border-color: var(--interactive);
