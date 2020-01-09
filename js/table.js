@@ -79,6 +79,7 @@ function SortTableRows(event){
 
 (() => {
 	document.querySelectorAll('th[scope=col]').forEach((Header) => {
+		Header.classList.add('table-sort-available');
 		Header.width = Header.scrollWidth;
 		Header.addEventListener('click', SortTableRows);
 		Header.addEventListener('tap', SortTableRows);
