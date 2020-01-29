@@ -1,0 +1,45 @@
+
+.input--number {
+	width: 5.4em;
+}
+
+.input--number-js {
+	display: inline-block;
+	-moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+	border-radius: 0;
+	padding: 0.45em;
+	text-align: center;
+	width: 2.7em;
+}
+
+.input--number-js:-webkit-outer-spin-button, .input--number-js:-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+
+.number-increment {
+	background: var(--interactive);
+	border: 1px solid var(--interactive);
+	color: #fff;
+	cursor: pointer;
+	line-height: 1.8em;
+	padding: 0.45em;
+	position: relative;
+	width: 2.7em;
+	z-index: 3;
+}
+
+.number-increment:hover {
+	background: var(--interactive-hover);
+	border-color: var(--interactive-hover);
+	color: #fff;
+}
+
+.number-increment:active {
+	background: var(--interactive-active);
+	border-color: var(--interactive-active);
+	color: #fff;
+}
