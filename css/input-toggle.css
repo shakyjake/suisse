@@ -5,7 +5,9 @@
 }
 
 .input--toggle, .label--toggle {
+	cursor: pointer;
 	display: inline-block;
+	position: relative;
 	vertical-align: bottom;
 }
 
@@ -21,11 +23,11 @@
 }
 
 .label--toggle-0 {
-	padding-right: 2.25em;
+	padding-right: calc(var(--spacing-m) + var(--spacing-s));
 }
 
 .label--toggle-1 {
-	padding-left: 2.25em;
+	padding-left: calc(var(--spacing-m) + var(--spacing-s));
 }
 
 .label--toggle-0:after, .label--toggle-1:after {
@@ -37,31 +39,31 @@
 
 .label--toggle-0:after {
 	background: var(--interactive);
-	border-radius: 0.9em;
-	display: block;
-	height: var(--text-body-line);
-	right: calc(var(--text-body-line) * -1);
+	border-radius: var(--spacing-s);
+	box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2);
+	height: var(--spacing-m);
+	right: calc(var(--spacing-m) * -1);
 	top: var(--spacing-xs);
-	width: 3.6em;
+	width: var(--spacing-l);
 }
 
 .label--toggle-1:after {
-	background-color: #f6f6f6;
-	background-clip: padding-box;
-	border: 0.2em solid transparent;
-	border-radius: 0.9em;
-	height: 1.4em;
-	left: calc(var(--text-body-line) * -1);
-	top: var(--spacing-xs);
-	width: 1.4em;
+	background: #efefef;
+	border-radius: 50%;
+	height: calc(var(--spacing-m) - 0.4em);
+	left: calc((var(--spacing-m) * -1) + 0.25em);
+	top: calc(var(--spacing-xs) + 0.2em);
+	width: calc(var(--spacing-m) - 0.4em);
 }
 
-.input--toggle-0:checked ~ label--toggle-1:after {
-	background-color: #FFF;
-	left: calc(var(--text-body-line) * -1);
+.input--toggle-1:checked ~ .label--toggle-1:after {
+	left: 0.15em;
 }
 
-.input--toggle-1:checked + label--toggle-1:after {
-	left: 0;
-}
+@media (prefers-reduced-motion: reduce){
 
+	.label--toggle-0:after, .label--toggle-1:after {
+		transition: none;
+	}
+
+}
