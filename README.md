@@ -19,6 +19,8 @@ https://shakyjake.github.io/suisse/html/input-radio.html
 
 https://shakyjake.github.io/suisse/html/input-toggle.html
 
+https://shakyjake.github.io/suisse/html/input-number.html
+
 https://shakyjake.github.io/suisse/html/input.html
 
 https://shakyjake.github.io/suisse/html/table.html
