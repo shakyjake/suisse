@@ -26,3 +26,5 @@ https://shakyjake.github.io/suisse/html/input.html
 https://shakyjake.github.io/suisse/html/table.html
 
 https://shakyjake.github.io/suisse/html/textarea.html
+
+https://shakyjake.github.io/suisse/html/fieldset.html
