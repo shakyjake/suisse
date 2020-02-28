@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Fieldset</title>
+		<link href="../css/common.css" rel="stylesheet" />
+		<link href="../css/fieldset.css" rel="stylesheet" />
+		<link href="../css/button.css" rel="stylesheet" />
+		<style>
+			body {
+				margin: 0 auto;
+				max-width: 45em;
+				padding: 2.7em 0;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<form method="post" action="">
+			<div class="auto-stage-fieldset">
+				<fieldset>
+					<legend>Your Details</legend>
+					<div class="field">
+						<label for="Name">Your Name:</label>
+						<input type="text" name="Name" id="Name" autocomplete="name" />
+					</div>
+					<div class="field">
+						<label for="Email">Email:</label>
+						<input type="email" name="Email" id="Email" autocomplete="email" />
+					</div>
+					<div class="field">
+						<label for="Phone">Phone Number:</label>
+						<input type="tel" name="Phone" id="Phone" autocomplete="tel" />
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Address</legend>
+					<div class="field">
+						<label for="Address">Address:</label>
+						<textarea name="Address" id="Address" autocomplete="street-address"></textarea>
+					</div>
+					<div class="field">
+						<label for="Town">Town / City: <span class="optional-flag">(optional)</span></label>
+						<input type="text" name="Town" id="Town" />
+					</div>
+					<div class="field">
+						<label for="County">County: <span class="optional-flag">(optional)</span></label>
+						<input type="text" name="County" id="County" />
+					</div>
+					<div class="field">
+						<label for="Postcode">Postal Code:</label>
+						<input type="text" name="Postcode" id="Postcode" autocomplete="postal-code" />
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend>Extras</legend>
+					<div class="field">
+						<label for="Fruit">Favourite Fruit:</label>
+						<input type="text" name="Fruit" id="Fruit" />
+					</div>
+					<div class="field">
+						<label for="Animal">Favourite Animal:</label>
+						<select name="Animal" id="Animal">
+							<option disabled selected value="">Please Select</option>
+							<option value="1">Spaniel</option>
+						</select>
+					</div>
+					<div class="field">
+						<label for="Other">Feedback: <span class="optional-flag">(optional)</span></label>
+						<input type="text" name="Other" id="Other" />
+					</div>
+					<div class="field field--btn">
+						<button type="submit" class="primary-action">Save details</button>
+					</div>
+				</fieldset>
+			</div>
+		</form>
+		<!--
+			Future considerations:
+			-------------
+			# Should we have next/previous arrows at the bottom of each fieldset?
+			# If yes, should they be:
+				# inside the fieldset so they're always directly under the last field filled?
+				# outside the fieldsets so they're not moving around?
+			# Should the submit button be outside the fieldsets so it's accessible from any point? Or duplicated in each?
+			# The tabbed approach currently doesn't give a strong feeling of progress.
+			# The active tabs don't follow the interactivity patterns of all the other components.
+		-->
+		<script src="../js/fieldset.js"></script>
+	</body>
+</html>
