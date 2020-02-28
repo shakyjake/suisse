@@ -1,0 +1,81 @@
+/* Fieldset */
+
+fieldset {
+	margin: var(--spacing-m) 0;
+	padding: var(--spacing-s) var(--spacing-m);
+}
+
+legend {
+	padding: var(--spacing-xs) var(--spacing-s);
+}
+
+.auto-stage-fieldset--js {
+	padding-top: calc(var(--spacing-l) + var(--spacing-s));
+	position: relative;
+}
+
+.auto-stage-fieldset-scroller {
+	display: flex;
+	flex-wrap: no-wrap;
+	overflow: hidden;
+}
+
+.fieldset--js {
+	border: none;
+	box-sizing: border-box;
+	flex: 0 0 100%;
+	margin: var(--spacing-m) 0;
+	padding: 0 var(--spacing-m);
+}
+
+.legend--js {
+	background: var(--interactive);
+	border: 1px solid var(--interactive);
+	color: #fff;
+	cursor: pointer;
+	box-sizing: border-box;
+	position: absolute;
+	text-align: center;
+	top: 0;
+}
+
+.legend--js:hover {
+	background: var(--interactive-hover);
+	border-color: var(--interactive-hover);
+}
+
+.legend--js:active {
+	background: var(--interactive-active);
+	border-color: var(--interactive-active);
+}
+
+.fieldset--js:first-child .legend--js {
+	border-radius: 0.25em 0 0 0.25em;
+}
+
+.fieldset--js:last-child .legend--js {
+	border-radius: 0 0.25em 0.25em 0;
+}
+
+.fieldset--js + .fieldset--js .legend--js {
+	border-left: none;
+}
+
+.legend--active, .legend--active:hover, .legend--active:active {
+	background: #fff;
+	border-color: var(--interactive);
+	color: var(--interactive);
+	cursor: default;
+}
+
+.fieldset-contains-errors:after {
+	background: #c24;
+	border: 0.225em solid #fff;
+	border-radius: 0.9em;
+	color: #fff;
+	content: '!';
+	display: inline-block;
+	line-height: 1.35em;
+	margin: 0 0 0 0.45em;
+	width: 1.35em;
+}

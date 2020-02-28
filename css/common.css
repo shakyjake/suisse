@@ -30,6 +30,7 @@ html {
 	--interactive: #0092cb;
 	--interactive-hover: #00a4e0;
 	--interactive-active: #00739e;
+	--interactive-disabled: #98d3ea;/* I know, I know, terrible name */
 	--text-body-font: Roboto, sans-serif;
 	--text-body-line: 1.8em;
 	--text-body-weight: 400;
@@ -122,6 +123,14 @@ label {
 	font-style: italic;
 }
 
+.form-helper {
+	display: block;
+	font-size: 0.75em;
+	font-style: italic;
+	line-height: 1.8em;
+	padding: 0 0 0.45em 0;
+}
+
 input, textarea, select {
 	background: none;
 	border: 1px solid #999;
@@ -148,4 +157,21 @@ input:focus, textarea:focus, select:focus {
 	margin: 0;
 }
 
+input:invalid, textarea:invalid, select:invalid {
+	border-color: #C24;
+	box-shadow: none;
+}
+
+input:invalid:focus, textarea:invalid:focus, select:invalid:focus {
+	border-color: #C24;
+	box-shadow: 0 0 0 0.3em rgba(0,0,0,0.1);
+}
+
+.validation-error {
+	background: #f4d2d9;
+	color: #C24;
+	margin: 0 1px;
+	padding: var(--spacing-xs) var(--spacing-s);
+	width: calc(100% - 2px - var(--spacing-m));
+}
 
