@@ -31,7 +31,7 @@
 	box-shadow: 0 0 0 1px #666;
 }
 
-[type=radio] + label:active:before {
+[type=radio] + label:active:before, [type=radio]:focus + label:before {
 	box-shadow: 0 0 0 2px #1793E5, 0 0 0 calc(0.25em + 2px) rgba(0,0,0,0.1);
 }
 
@@ -52,4 +52,24 @@
 	margin: 2px;
 	transition: width 0.1s, height 0.1s, margin 0.1s;
 	width: calc(var(--text-body-line) - 4px);
+}
+
+[type=radio]:checked + label:hover:after {
+	background: var(--interactive-hover);
+}
+
+[type=radio]:checked + label:active:after {
+	background: var(--interactive-active);
+}
+
+[type=radio]:focus:checked + label:before {
+	box-shadow: 0 0 0 2px #1793E5, 0 0 0 calc(0.25em + 2px) rgba(0,0,0,0.1);
+}
+
+@media (prefers-reduced-motion: reduce){
+
+	[type=radio] + label:after , [type=radio]:checked + label:after {
+		transition: none;
+	}
+
 }
